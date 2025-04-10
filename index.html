@@ -3,54 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Data Science Hub BR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Data Science Hub BR</h1>
+        <div class="logo">
+            <i class="fas fa-chart-line"></i>
+            <h1>Data Science Hub BR</h1>
+        </div>
         <p>Seu cantinho simples pra aprender data science</p>
     </header>
+    
     <nav>
-        <a href="#about">Sobre</a>
-        <a href="#tools">Ferramentas</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
+        <a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a>
+        <a href="#ferramentas"><i class="fas fa-tools"></i> Ferramentas</a>
+        <a href="#projetos"><i class="fas fa-project-diagram"></i> Projetos</a>
+        <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
     </nav>
-    <section id="about">
-        <h2>Sobre Data Science</h2>
-        <p>Data science é aquela mistura de estatística, programação e conhecimento do negócio pra extrair insights dos dados. Serve pra negócios, saúde, ciência e muito mais.</p>
-        <p>Nosso rolê é deixar data science fácil pra quem tá começando.</p>
-    </section>
-    <section id="tools">
-        <h2>Ferramentas Chave</h2>
-        <p>Essas são as ferramentas que todo data scientist usa:</p>
+    
+    <div class="container">
+        <section id="sobre" class="transparent-box">
+            <h2><i class="fas fa-info-circle"></i> Sobre Data Science</h2>
+            <p>Data science é aquela mistura de estatística, programação e conhecimento do negócio pra extrair insights dos dados. Serve pra negócios, saúde, ciência e muito mais.</p>
+            <p>Nosso rolê é deixar data science fácil pra quem tá começando.</p>
+        </section>
         
-        <div class="img-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" alt="Jupyter">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/TensorFlow_logo.svg/1200px-TensorFlow_logo.svg.png" alt="TensorFlow">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png" alt="R">
-        </div>
-    </section>
-    <section id="projects">
-        <h2>Projetos Exemplo</h2>
-        <p>Projetos simples pra você começar:</p>
+        <section id="ferramentas" class="transparent-box">
+            <h2><i class="fas fa-tools"></i> Ferramentas Chave</h2>
+            <p>Essas são as ferramentas que todo data scientist usa:</p>
+            
+            <div class="ferramentas">
+                <div class="ferramenta">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="ferramenta">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" alt="Jupyter">
+                    <p>Jupyter</p>
+                </div>
+                <div class="ferramenta">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/TensorFlow_logo.svg" alt="TensorFlow">
+                    <p>TensorFlow</p>
+                </div>
+                <div class="ferramenta">
+                    <img src="https://anaconda.org/static/img/anaconda-symbol.svg" alt="Conda">
+                    <p>Conda</p>
+                </div>
+            </div>
+        </section>
         
-        <div class="img-container">
-            <img src="https://miro.medium.com/v2/resize:fit:1200/1*5w6uGX9Z3QzF0Q9p10KPbA.jpeg" alt="Análise de Dados">
-            <img src="https://miro.medium.com/v2/resize:fit:1200/1*VVD3J_3ZPQ1J0jQee05aJw.jpeg" alt="Machine Learning">
-            <img src="https://miro.medium.com/v2/resize:fit:1200/1*4G__SV580CxFj78o9yUXuQ.png" alt="Visualização de Dados">
-            <img src="https://miro.medium.com/v2/resize:fit:1200/1*L5A_1BVhQhNkpOq5G6M8Lg.png" alt="Redes Neurais">
-        </div>
-    </section>
-    <footer id="contact">
+        <section id="projetos" class="transparent-box">
+            <h2><i class="fas fa-project-diagram"></i> Projetos Exemplo</h2>
+            <p>Projetos simples pra você começar:</p>
+            
+            <div class="projeto">
+                <h3><i class="fas fa-chart-bar"></i> Análise de Dados Básica</h3>
+                <p>Que tal analisar dados do ENEM ou do IBGE? É um ótimo jeito de começar. Usa o Pandas pra limpar os dados e Matplotlib pra criar uns gráficos maneiros.</p>
+            </div>
+            
+            <div class="projeto">
+                <h3><i class="fas fa-dollar-sign"></i> Previsão de Preços</h3>
+                <p>Pega uns dados de imóveis e tenta prever os preços com regressão linear. Dá pra fazer com Scikit-learn e é bem satisfatório ver o modelo funcionando!</p>
+            </div>
+            
+            <div class="projeto">
+                <h3><i class="fas fa-comment-dots"></i> Classificação de Texto</h3>
+                <p>Que tal criar um modelo que classifica se um tweet é positivo ou negativo? Dá pra fazer com NLP básico e uns algoritmos simples.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer id="contato">
         <div class="social-links">
-            <a href="https://github.com/coelhovsk" target="_blank">GitHub</a>
-            <a href="https://instagram.com/coelhovsk" target="_blank">Instagram</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="https://github.com/coelhovsk" target="_blank">Github <i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/coelhovsk" target="_blank">Instagram <i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/seu-linkedin" target="_blank">LinkedIn <i class="fab fa-linkedin"></i></a>
         </div>
-        <p>&copy; 2023 Data Science Hub BR. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Data Science Hub BR. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
