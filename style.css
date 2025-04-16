@@ -14,12 +14,26 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: var(--cinza);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative; /* Adicione isso */
+    background: transparent; /* Remova a cor de fundo */
+}
+
+/* Novo pseudo-elemento para o fundo desfocado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url(https://img.freepik.com/vetores-gratis/fundo-futurista-gradiente-criativo_23-2149136590.jpg?t=st=1744286177~exp=1744289777~hmac=9169ae86ab48cf583b801b7b1229804f3c313bd429e5cf8c58c7392881f4a915&w=996);
-    
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Ajuste o valor para mais/menos desfoque */
+    z-index: -1; /* Mantém atrás do conteúdo */
 }
 
 .container {
