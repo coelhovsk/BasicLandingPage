@@ -1,0 +1,69 @@
+        :root {
+            --primary-color: #6e8efb;
+            --secondary-color: #a777e3;
+            --dark-color: #343a40;
+        }
+        body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-futurista-gradiente-criativo_23-2149136590.jpg?t=st=1744286177~exp=1744289777~hmac=9169ae86ab48cf583b801b7b1229804f3c313bd429e5cf8c58c7392881f4a915&w=996);
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Ajuste o valor para mais/menos desfoque */
+    z-index: -1; /* Mantém atrás do conteúdo */
+}
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+        }
+        
+        .navbar {
+            background-color: var(--dark-color) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #5a7ae8;
+            border-color: #5a7ae8;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .card {
+            margin-bottom: 1rem;
+            border: 1px solid rgba(110, 142, 251, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(110, 142, 251, 0.2);
+        }
+        
+        .hero-section {
+            padding: 1.5rem 0;
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
