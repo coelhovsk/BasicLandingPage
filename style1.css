@@ -1,69 +1,186 @@
-        :root {
-            --primary-color: #6e8efb;
-            --secondary-color: #a777e3;
-            --dark-color: #343a40;
-        }
-        body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url(https://img.freepik.com/vetores-gratis/fundo-futurista-gradiente-criativo_23-2149136590.jpg?t=st=1744286177~exp=1744289777~hmac=9169ae86ab48cf583b801b7b1229804f3c313bd429e5cf8c58c7392881f4a915&w=996);
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px); /* Ajuste o valor para mais/menos desfoque */
-    z-index: -1; /* Mantém atrás do conteúdo */
+:root {
+    --roxo-escuro: #2E073F;
+    --roxo-medio: #7A1CAC;
+    --roxo-claro: #AD49E1;
+    --roxo-pastel: #EBD3F8;
+    --branco: #ffffff;
+    --cinza: #f5f5f5;
 }
-        
-        .bg-gradient {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
-        }
-        
-        .navbar {
-            background-color: var(--dark-color) !important;
-        }
-        
-        .btn-primary {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-        
-        .btn-primary:hover {
-            background-color: #5a7ae8;
-            border-color: #5a7ae8;
-        }
-        
-        .btn-outline-primary {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-        
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .card {
-            margin-bottom: 1rem;
-            border: 1px solid rgba(110, 142, 251, 0.2);
-            transition: transform 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(110, 142, 251, 0.2);
-        }
-        
-        .hero-section {
-            padding: 1.5rem 0;
-            color: white;
-        }
-        
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 2rem 0;
-            margin-top: 2rem;
-        }
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--cinza);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(https://img.freepik.com/vetores-gratis/fundo-futurista-gradiente-criativo_23-2149136590.jpg?t=st=1744286177~exp=1744289777~hmac=9169ae86ab48cf583b801b7b1229804f3c313bd429e5cf8c58c7392881f4a915&w=996);
+    
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    background: var(--roxo-escuro);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo i {
+    color: var(--roxo-claro);
+    font-size: 2rem;
+}
+
+nav {
+    background: var(--roxo-medio);
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: var(--roxo-claro);
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+h2 {
+    color: var(--branco);
+    border-bottom: 2px solid var(--roxo-pastel);
+    padding-bottom: 10px;
+}
+
+.ferramentas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.ferramenta {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    color: var(--branco);
+    transition: transform 0.3s;
+}
+
+.ferramenta:hover {
+    transform: scale(1.05);
+}
+
+.ferramenta img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.projeto {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    color: var(--branco);
+}
+
+.projeto h3 {
+    color: var(--roxo-pastel);
+    margin-top: 0;
+}
+
+footer {
+    background: var(--roxo-escuro);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.transparent-box {
+    background-color: rgba(46, 7, 63, 0.85);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--branco);
+    width: 100%;
+    max-width: 800px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .logo {
+        flex-direction: column;
+    }
+    
+    .ferramenta {
+        width: 120px;
+    }
+    
+    .ferramenta img {
+        width: 80px;
+        height: 80px;
+    }
+    .content-container {
+        padding: 10px;
+    }
+    
+    .transparent-box {
+        padding: 15px;
+    }
+    
+    .gallery img {
+        width: 100%;
+        height: 100%;
+    }
+}
